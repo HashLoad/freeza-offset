@@ -1,7 +1,8 @@
 # freeza-offset
 
-<span style="display:block;text-align:center">![freeza-logo](assets/freeza-logo.png)</span>
-
+<p align="center">
+  <img src="https://github.com/HashLoad/freeza-offset/raw/master/assets/freeza-logo.png" alt="freeza-offset"/>
+</p>
 
 ## What is it?
 
