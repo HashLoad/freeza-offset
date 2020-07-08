@@ -52,6 +52,6 @@ python setup.py install
 
 For usage questions, the best place to go to is open [new issue](https://github.com/HashLoad/freeza-offset/issues/new)
 
-## Contributing to freeza-offset [![Open Source Helpers]
+## Contributing to freeza-offset
 
 All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.
