@@ -27,8 +27,12 @@ conda install freeza-offset
 ```
 
 ```sh
-# or PyPI
+# PyPI
 pip install freeza-offset
+```
+```sh
+# Databricks
+dbutils.library.installPyPI("freeza-offset")
 ```
 
 ## Dependencies
