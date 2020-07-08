@@ -51,13 +51,10 @@ python setup.py install
 ## Example:
 
 ```shell
-pip install py4j  
 pip install freeza-offset
 ```
 
 ```python
-import os
-os.environ['PYSPARK_SUBMIT_ARGS'] = '--packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.0 pyspark-shell'
 from pyspark.sql import SparkSession
 
 spark = SparkSession \
@@ -99,10 +96,6 @@ tr = freeza.start_commiter_thread(
 
 ```python
 tr.isAlive()
-```
-
-```python
-qry.stop()
 ```
 
 ## Getting Help
