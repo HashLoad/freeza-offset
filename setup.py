@@ -1,6 +1,6 @@
 import setuptools
 
-exec(open('freeza-offset/version.py').read())
+exec(open('freeza/version.py').read())
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -15,7 +15,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/HashLoad/freeza-offset",
     packages=setuptools.find_packages(),
-    keywords="apache kafka",
+    keywords="spark spark-streaming kafka kafka-commit kafka-offset-commits databricks",
     classifiers=[
         "Programming Language :: Python",
         "Programming Language :: Python :: 2",
