@@ -44,10 +44,7 @@ cloning the git repo), execute:
 python setup.py install
 ```
 
-## License
-[MIT](LICENSE)
-
-## Notebook Example:
+## Example:
 
 ```shell
 pip install py4j  
@@ -111,3 +108,6 @@ For usage questions, the best place to go to is open [new issue](https://github.
 ## Contributing to freeza-offset
 
 All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.
+
+## License
+[MIT](LICENSE)
