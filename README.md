@@ -1,6 +1,7 @@
 # freeza-offset
 
-![freeza-logo](assets/freeza-logo.png)
+<span style="display:block;text-align:center">![freeza-logo](assets/freeza-logo.png)</span>
+
 
 ## What is it?
 
