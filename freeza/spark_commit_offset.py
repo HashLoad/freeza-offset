@@ -7,7 +7,6 @@ import threading
 
 
 def start_commiter(query, bootstrap_servers, group_id, sleep_time=5, **kwargs):
-    group_id = group_id + 'commited'
     options = {
         "auto_offset_reset": "earliest",
         "bootstrap_servers": bootstrap_servers,
@@ -17,6 +16,7 @@ def start_commiter(query, bootstrap_servers, group_id, sleep_time=5, **kwargs):
     }
 
     consumer = KafkaConsumer(**options)
+    time.sleep(5)
 
     while query.isActive:
         for offsets in query.lastProgress['sources']:

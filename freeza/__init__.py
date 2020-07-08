@@ -1,2 +1,2 @@
-import spark_commit_offset
-from version import __version__
+import freeza.spark_commit_offset
+from freeza.version import __version__
