@@ -6,7 +6,7 @@
 
 ## What is it?
 
-**freeza-offset** is a Python package that provides a simple way to commit the offset consumed by Spark Streaming in Kafka's ConsumerGroup.
+**freeza-offset** is a Python package that provides a simple way to commit the offset consumed by Spark Streaming in Kafka's ConsumerGroup, but this commit is only for consum tracking.
 
 ## Main Features
 Here are just a few of the things that freeza-offset does well:
