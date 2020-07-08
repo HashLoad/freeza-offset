@@ -1,6 +1,6 @@
 # freeza-offset
 
-![freeza-logo](freeza-logo.png)
+![freeza-logo](assets/freeza_logo.png)
 
 ## What is it?
 
@@ -47,6 +47,60 @@ python setup.py install
 
 ## Notebook Example:
 
+```shell
+pip install py4j  
+pip install freeza-offset
+```
+
+```python
+import os
+os.environ['PYSPARK_SUBMIT_ARGS'] = '--packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.0 pyspark-shell'
+from pyspark.sql import SparkSession
+
+spark = SparkSession \
+    .builder \
+    .appName("FreezaCommitTest") \
+    .getOrCreate()
+```
+
+```python
+df = spark \
+  .readStream \
+  .format("kafka") \
+  .option("kafka.bootstrap.servers", "kafka1:9092,kafka2:9092,kafka3:9092") \
+  .option("subscribe", "topic-name") \
+  .option("startingOffsets", "earliest") \
+  .option("kafka.group.id", "spark-freeza-runner") \
+  .load()
+ ```
+
+```python
+df.selectExpr("key", "value")
+```
+
+```python
+qry = df.writeStream \
+    .format("console") \
+    .option("truncate","false") \
+    .start()
+```
+
+```python
+import freeza
+tr = freeza.start_commiter_thread(
+    query=qry,
+    bootstrap_servers=bootstrap_servers,
+    group_id="spark-freeza-commiter"
+)
+```
+
+```python
+tr.isAlive()
+```
+
+```python
+qry.stop()
+```
 
 ## Getting Help
 
